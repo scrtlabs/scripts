@@ -246,7 +246,7 @@ echo "Created: " >> $HOME/install.progress.txt
 cat $HOME/docker-compose.yaml >> $HOME/install.progress.txt
 
 UBUNTUVERSION=$(lsb_release -r -s | cut -d '.' -f 1)
-PSW_PACKAGES='libsgx-enclave-common libsgx-aesm-launch-plugin libsgx-aesm-quote-ex-plugin libsgx-urts sgx-aesm-service libsgx-uae-service autoconf libtool make'
+PSW_PACKAGES='libsgx-aesm-pce-plugin libsgx-qe3-logic libsgx-pce-logic libsgx-aesm-ecdsa-plugin libsgx-dcap-ql libsgx-dcap-default-qpl libsgx-dcap-quote-verify libsgx-enclave-common libsgx-aesm-launch-plugin libsgx-aesm-quote-ex-plugin libsgx-urts sgx-aesm-service libsgx-uae-service autoconf libtool make'
 
 if (($UBUNTUVERSION < 16)); then
 	echo "Your version of Ubuntu is not supported. Must have Ubuntu 16.04 and up. Aborting installation script..."
